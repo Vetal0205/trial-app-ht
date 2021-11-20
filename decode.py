@@ -1,4 +1,5 @@
 def decode(phraze, key):
+    result = ''
     coded = []
     alphabet = list('abcdefghijklmnopqrstuvwxyz')
     key *= len(phraze)
@@ -16,6 +17,6 @@ def decode(phraze, key):
                 coded.append(alphabet[a - b + 26])
             else:
                 coded.append(alphabet[a - b])
-    print(str(''.join(coded)))
+    return result.join(coded)
 
-decode('arlgilmjier ip cfzl', 'laxar')
+print(decode('arlgilmjier ip cfzl', 'laxar'))

@@ -1,5 +1,6 @@
 def encode(phraze, key):
     coded = []
+    result = ''
     alphabet = list('abcdefghijklmnopqrstuvwxyz')
     key *= len(phraze)
     key = key.lower()
@@ -16,6 +17,6 @@ def encode(phraze, key):
                 coded.append(alphabet[a+b-26])
             else:
                 coded.append(alphabet[a + b])
-    print(str(''.join(coded)))
+    return result.join(coded)
 
-code('programming is cool', 'laxar')
+print(encode('programming is cool', 'laxar'))
